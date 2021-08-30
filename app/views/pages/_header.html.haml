@@ -1,0 +1,6 @@
+%header.mb-auto
+  %div
+    %h3.float-md-start.mb-0 Wizville Url Shortener
+    %nav.nav.nav-masthead.justify-content-center.float-md-end
+      = link_to 'Shortener', root_path, class: "nav-link #{(controller.action_name.eql? 'index') ? 'active' : ''}"
+      = link_to 'Url list', list_path, class: "nav-link #{(%w{list show}.include? controller.action_name) ? 'active' : ''}"

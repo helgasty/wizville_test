@@ -1,0 +1,16 @@
+%table.table{:style => "color:white;"}
+  %thead
+    %tr
+      %th{:scope => "col"} #
+      %th{:scope => "col"} Base URL
+      %th{:scope => "col"} Generate URL
+      %th{:scope => "col"}
+      %th{:scope => "col"}
+  %tbody
+    - @links.each do |link|
+      %tr
+        %th{:scope => "row"}= link.id
+        %td= link.base_url
+        %td= link_to link.short, link.short, target: "_blank"
+        %td= link_to 'delete', link_path(link.id), class: 'btn btn-danger', data: {confirm: 'Are you sure ?', method: 'delete'}
+        %td= link_to 'stats', statistics_path(link.id), class: 'btn btn-primary'

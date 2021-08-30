@@ -1,0 +1,5 @@
+= javascript_include_tag 'application'
+
+%h1 URL Statistics
+= link_to @custom_url, @custom_url, target: "_blank"
+= line_chart @stats.group_by_minute(:created_at).count
