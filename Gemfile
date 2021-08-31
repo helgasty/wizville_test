@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'haml', '~> 5.2', '>= 5.2.2'
 gem 'chartkick', '~> 4.0', '>= 4.0.5'
 gem 'groupdate', '~> 5.2', '>= 5.2.2'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
